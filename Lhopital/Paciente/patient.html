@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paciente</title>
+  <link rel="stylesheet" href="../Paciente/patient.css"> <!-- Ruta corregida -->
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido paciente: <span id="nombrePaciente"></span></h1>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    <h2>Seleccione sus síntomas</h2>
+    <div class="sintomas-container">
+      <!-- Categoría 1: Síntomas generales -->
+      <div class="categoria">
+        <h3>Síntomas Generales</h3>
+        <label><input type="checkbox" value="Fiebre"> Fiebre</label>
+        <label><input type="checkbox" value="Cansancio"> Cansancio</label>
+        <label><input type="checkbox" value="Pérdida de apetito"> Pérdida de apetito</label>
+        <label><input type="checkbox" value="Sudores nocturnos"> Sudores nocturnos</label>
+        <label><input type="checkbox" value="Pérdida de peso"> Pérdida de peso</label>
+      </div>
+
+      <!-- Categoría 2: Síntomas respiratorios -->
+      <div class="categoria">
+        <h3>Síntomas Respiratorios</h3>
+        <label><input type="checkbox" value="Tos"> Tos</label>
+        <label><input type="checkbox" value="Dificultad para respirar"> Dificultad para respirar</label>
+        <label><input type="checkbox" value="Dolor de garganta"> Dolor de garganta</label>
+        <label><input type="checkbox" value="Congestión nasal"> Congestión nasal</label>
+        <label><input type="checkbox" value="Estornudos"> Estornudos</label>
+      </div>
+
+      <!-- Categoría 3: Síntomas digestivos -->
+      <div class="categoria">
+        <h3>Síntomas Digestivos</h3>
+        <label><input type="checkbox" value="Náuseas"> Náuseas</label>
+        <label><input type="checkbox" value="Vómitos"> Vómitos</label>
+        <label><input type="checkbox" value="Diarrea"> Diarrea</label>
+        <label><input type="checkbox" value="Dolor abdominal"> Dolor abdominal</label>
+        <label><input type="checkbox" value="Acidez"> Acidez</label>
+      </div>
+
+      <!-- Categoría 4: Síntomas neurológicos -->
+      <div class="categoria">
+        <h3>Síntomas Neurológicos</h3>
+        <label><input type="checkbox" value="Dolor de cabeza"> Dolor de cabeza</label>
+        <label><input type="checkbox" value="Mareos"> Mareos</label>
+        <label><input type="checkbox" value="Confusión"> Confusión</label>
+        <label><input type="checkbox" value="Pérdida de memoria"> Pérdida de memoria</label>
+        <label><input type="checkbox" value="Convulsiones"> Convulsiones</label>
+      </div>
+
+      <!-- Categoría 5: Síntomas musculares -->
+      <div class="categoria">
+        <h3>Síntomas Musculares</h3>
+        <label><input type="checkbox" value="Dolor muscular"> Dolor muscular</label>
+        <label><input type="checkbox" value="Debilidad muscular"> Debilidad muscular</label>
+        <label><input type="checkbox" value="Calambres"> Calambres</label>
+        <label><input type="checkbox" value="Hinchazón"> Hinchazón</label>
+        <label><input type="checkbox" value="Rigidez"> Rigidez</label>
+      </div>
+    </div>
+
+    <h2>Comentarios</h2>
+    <textarea id="comentarios" rows="4"></textarea>
+    
+    <button onclick="guardarSintomas()">Guardar Información</button>
+
+    <!-- Contenedor para la respuesta del doctor -->
+    <div id="respuestaDoctorContainer" style="display: none;">
+      <h2>Respuesta del Doctor:</h2>
+      <p id="respuestaDoctor"></p>
+    </div>
+  </div>
+
+  <script src="../Paciente/patient.js"></script> <!-- Ruta corregida -->
+</body>
+</html>

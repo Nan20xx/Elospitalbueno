@@ -1,0 +1,194 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa; /* Fondo azul claro */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem; /* Añadir margen para evitar que el contenido toque los bordes */
+}
+
+/* Título principal */
+h1 {
+  color: #00796b; /* Verde azulado oscuro */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de Cerrar sesión */
+button[onclick="cerrarSesion()"] {
+  background-color: #d32f2f; /* Rojo */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Posicionamiento absoluto */
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde la derecha */
+}
+
+button[onclick="cerrarSesion()"]:hover {
+  background-color: #b71c1c; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* Lista de pacientes */
+.lista-pacientes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para cada botón de paciente */
+.paciente-item {
+  background-color: #00796b; /* Verde azulado oscuro */
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: left;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Efecto al pasar el mouse */
+.paciente-item:hover {
+  background-color: #004d40; /* Verde azulado más oscuro */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Efecto al hacer clic */
+.paciente-item:active {
+  transform: translateY(0); /* Restablecer elevación */
+}
+
+/* Detalle del paciente */
+#detallePaciente {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+#detallePaciente h3 {
+  color: #00796b; /* Verde azulado oscuro */
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Lista de síntomas */
+#listaSintomas {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#listaSintomas li {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  color: #00796b; /* Verde azulado oscuro */
+}
+
+/* Comentarios del paciente */
+#comentariosPaciente {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #00796b; /* Verde azulado oscuro */
+}
+
+/* Caja de comentarios del doctor */
+#respuestaDoctor {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #b2dfdb; /* Borde azul claro */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #00796b; /* Verde azulado oscuro */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  outline: none;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de Guardar Respuesta */
+button[onclick="guardarRespuesta()"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00796b; /* Verde azulado oscuro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[onclick="guardarRespuesta()"]:hover {
+  background-color: #004d40; /* Verde azulado más oscuro al pasar el mouse */
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem; /* Reducir el padding en pantallas más pequeñas */
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Reducir el tamaño del título en pantallas pequeñas */
+  }
+
+  .lista-pacientes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar el tamaño de las columnas */
+  }
+
+  #respuestaDoctor {
+    font-size: 0.875rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  button[onclick="guardarRespuesta()"] {
+    font-size: 0.875rem; /* Reducir el tamaño de la fuente del botón en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem; /* Reducir aún más el padding en pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reducir más el tamaño del título en pantallas muy pequeñas */
+  }
+
+  .lista-pacientes {
+    grid-template-columns: 1fr; /* Cambiar a 1 columna en pantallas muy pequeñas */
+  }
+
+  #respuestaDoctor {
+    padding: 0.5rem; /* Reducir el padding de la caja de comentarios en pantallas muy pequeñas */
+  }
+
+  button[onclick="guardarRespuesta()"] {
+    padding: 0.5rem; /* Reducir el padding del botón en pantallas muy pequeñas */
+  }
+}

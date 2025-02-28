@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa; /* Fondo azul claro, como un ambiente hospitalario */
+  background-image: url('/Diseño\ sin\ título.png');
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor del formulario */
+form {
+  background-color: #ffffff; /* Fondo blanco, limpio y profesional */
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 1rem; /* Añadir margen para evitar que el formulario toque los bordes en pantallas pequeñas */
+}
+
+/* Título del formulario */
+h1 {
+  color: #00796b; /* Verde azulado oscuro, como un uniforme médico */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Etiquetas de los campos */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00796b; /* Verde azulado oscuro */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #b2dfdb; /* Borde azul claro */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #00796b; /* Verde azulado oscuro */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  outline: none;
+}
+
+/* Efecto al enfocar los campos */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #00796b; /* Borde verde azulado oscuro al enfocar */
+  background-color: #ffffff; /* Fondo blanco al enfocar */
+}
+
+/* Selector personalizado */
+select {
+  appearance: none; /* Quita el estilo por defecto del select */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2300796B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px;
+}
+
+/* Botón de Entrar */
+input[type="button"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00796b; /* Verde azulado oscuro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+input[type="button"]:hover {
+  background-color: #004d40; /* Verde azulado más oscuro al pasar el mouse */
+}
+
+/* Mensajes de error (opcional) */
+.error-message {
+  color: #d32f2f; /* Rojo para errores */
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem; /* Añadir padding para evitar que el contenido toque los bordes */
+  }
+
+  form {
+    padding: 1.5rem; /* Reducir el padding en pantallas más pequeñas */
+    max-width: 90%; /* Ajustar el ancho máximo para pantallas pequeñas */
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Reducir el tamaño del título en pantallas pequeñas */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    font-size: 0.875rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  input[type="button"] {
+    font-size: 0.875rem; /* Reducir el tamaño de la fuente del botón en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1rem; /* Reducir aún más el padding en pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reducir más el tamaño del título en pantallas muy pequeñas */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    padding: 0.5rem; /* Reducir el padding de los campos en pantallas muy pequeñas */
+  }
+
+  input[type="button"] {
+    padding: 0.5rem; /* Reducir el padding del botón en pantallas muy pequeñas */
+  }
+}
